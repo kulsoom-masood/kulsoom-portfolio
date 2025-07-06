@@ -8,92 +8,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <style>
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #111;
-    color: #fff;
-    margin: 0;
-    scroll-behavior: smooth;
-}
-.navbar {
-    background: #000;
-}
-.navbar-brand, .nav-link {
-    color: #fff !important;
-}
-.hero {
-    min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('hero-bg.jpg') center/cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-}
-.hero img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-.hero p {
-    max-width: 600px;
-    margin: 0 auto 25px;
-    font-weight: 300;
-}
-.btn-primary {
-    border-radius: 30px;
-    padding: 8px 25px;
-}
-section {
-    padding: 80px 20px;
-}
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-.project-card {
-    background: #1a1a1a;
-    border-radius: 12px;
-    padding: 20px;
-    height: 100%;
-    transition: transform 0.3s ease;
-}
-.project-card:hover {
-    transform: translateY(-6px);
-}
-.timeline {
-    border-left: 2px solid #444;
-    padding-left: 25px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-.timeline-event {
-    margin-bottom: 25px;
-    cursor: pointer;
-}
-.skills span {
-    background: #222;
-    display: inline-block;
-    margin: 5px;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-}
-footer {
-    background: #000;
-    color: #888;
-    padding: 15px 0;
-    text-align: center;
-}
+body { font-family: 'Poppins', sans-serif; background: #111; color: #fff; margin: 0; scroll-behavior: smooth; }
+.navbar { background: #000; }
+.navbar-brand, .nav-link { color: #fff !important; }
+.hero { min-height: 100vh; background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('hero-bg.jpg') center/cover no-repeat; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+.hero img { width:140px; height:140px; border-radius:50%; margin-bottom:20px; }
+.hero h1 { font-size:2.5rem; margin-bottom:10px; }
+.hero p { max-width:600px; margin:0 auto 25px; font-weight:300; }
+.btn-primary { border-radius:30px; padding:8px 25px; }
+section { padding:80px 20px; }
+.section-title { text-align:center; margin-bottom:40px; font-size:1.8rem; font-weight:600; }
+.project-card { background:#1a1a1a; border-radius:12px; padding:20px; height:100%; transition:transform .3s ease; }
+.project-card:hover { transform:translateY(-6px); }
+.timeline-entry { background:#1a1a1a; border-left:3px solid #007bff; padding:15px 20px; margin-bottom:25px; border-radius:6px; }
+.skills-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap:15px; max-width:600px; margin:0 auto; }
+.skills-grid span { background:#222; display:block; text-align:center; padding:10px; border-radius:20px; }
+footer { background:#000; color:#888; padding:15px 0; text-align:center; }
 </style>
 </head>
 <body>
@@ -110,6 +40,7 @@ footer {
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -117,84 +48,94 @@ footer {
 </nav>
 
 <section class="hero" id="about" data-aos="fade-up">
-    <img src="mypic.jpeg" alt="Kulsoom Masood">
-    <h1>Kulsoom Masood</h1>
-    <p>AI Researcher & Software Engineer passionate about building intelligent, real-world solutions with AI, Computer Vision, and cutting-edge technologies.</p>
-    <a href="Kulsoom Masood_2025 (1).pdf" class="btn btn-primary mt-3" download>Download Resume</a>
+  <img src="mypic.jpeg" alt="Kulsoom Masood">
+  <h1>Kulsoom Masood</h1>
+  <p>AI Researcher & Software Engineer building practical, real-world solutions with AI, Computer Vision, and Software Development.</p>
+  <a href="Kulsoom Masood_2025 (1).pdf" class="btn btn-primary mt-3" download>Download Resume</a>
 </section>
 
 <section id="projects" data-aos="fade-up">
-    <h2 class="section-title">Projects</h2>
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="project-card h-100">
-            <h5>Raksha: AI Guardian</h5>
-            <p>AI-powered wearable and app for real-time gender-based violence threat detection using physiological and acoustic signals.</p>
-          </div>
+  <h2 class="section-title">Projects</h2>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="project-card h-100">
+          <h5>Raksha: AI Guardian</h5>
+          <p>Wearable + mobile app system for real-time gender-based violence threat detection using physiological and acoustic signals.  
+          <a href="Raksha__Your_AI_Powered_Guardian_final_final_ppt.pdf" target="_blank" class="text-white">View Report</a></p>
         </div>
-        <div class="col-md-4">
-          <div class="project-card h-100">
-            <h5>Traffic-Tech Surveillance</h5>
-            <p>Automated traffic surveillance system detecting over-speeding and license plates with Deep Learning on edge devices.</p>
-          </div>
+      </div>
+      <div class="col-md-4">
+        <div class="project-card h-100">
+          <h5>Traffic-Tech Surveillance</h5>
+          <p>Edge-based AI system for detecting traffic anomalies like over-speeding and license plates using Deep Learning on Jetson Nano.  
+          <a href="FinalProjectReport.pdf" target="_blank" class="text-white">View Report</a></p>
         </div>
-        <div class="col-md-4">
-          <div class="project-card h-100">
-            <h5>LLM Knowledge Chatbot</h5>
-            <p>Retrieval-Augmented Generation chatbot leveraging LLMs to answer organization-specific queries from internal documents.</p>
-          </div>
+      </div>
+      <div class="col-md-4">
+        <div class="project-card h-100">
+          <h5>LLM Knowledge Chatbot</h5>
+          <p>Retrieval-Augmented Generation chatbot utilizing LLMs to answer organization-specific queries from internal documents.</p>
         </div>
       </div>
     </div>
+  </div>
 </section>
 
 <section id="experience" data-aos="fade-up">
-    <h2 class="section-title">Experience</h2>
-    <div class="timeline">
-      <div class="timeline-event" onclick="alert('IIIT Hyderabad: AI models for traffic anomaly detection using LLMs like InternVL & InternLM-XComposer2.')">
-        <strong>2024</strong> - Research Intern, IIIT Hyderabad
-      </div>
-      <div class="timeline-event" onclick="alert('CMERI-CSIR: Designed underwater docking detection with size estimation without reference.')">
-        <strong>2023</strong> - Research Intern, CMERI-CSIR
-      </div>
-      <div class="timeline-event" onclick="alert('Pursuing B.Tech Computer Engineering from AMU with focus on AI & Software Development.')">
-        <strong>2021 - 2025</strong> - B.Tech, AMU
-      </div>
+  <h2 class="section-title">Experience</h2>
+  <div class="container">
+    <div class="timeline-entry">
+      <strong>2024 — Research Intern, IIIT Hyderabad</strong>
+      <p>Worked on Large Language Model (LLM) pipelines to detect and describe anomalous objects and events in Indian traffic scenes. Utilized InternVL and InternLM-XComposer2 models to caption traffic anomalies for improved autonomous vehicle perception. Evaluated model performance on datasets (METEOR, IDD) through Python-based analysis and manual verification. Operated on GPU servers in High-Performance Computing environments.  
+      <a href="final report.pdf" target="_blank" class="text-white">Read Final Report</a></p>
     </div>
+
+    <div class="timeline-entry">
+      <strong>2023 — Research Intern, CMERI-CSIR (Indian Academy of Sciences)</strong>
+      <p>Developed computer vision system for underwater docking detection using color extraction and image-based size estimation. Designed a novel size estimation method without reference objects, applied to AUV docking tasks. Implemented image processing solutions using Python and OpenCV to address underwater visibility challenges.  
+      <a href="ENGS1891_Kulsoom Final SRFP Report (Sent by Post) 04-08-2023.pdf" target="_blank" class="text-white">Read Final Report</a></p>
+    </div>
+
+    <div class="timeline-entry">
+      <strong>2021 – 2025 — B.Tech Computer Engineering, Aligarh Muslim University</strong>
+      <p>Final-year student with <strong>8.538 CGPA (Honours)</strong>. <strong>Batch Topper (1st Rank)</strong> in First Semester. Completed academic and research projects in AI, Computer Vision, and Software Development. Represented technical projects at national competitions including <strong>IIT Bombay Techfest</strong> and <strong>MTS NANDA Innovation Awards</strong>.</p>
+    </div>
+  </div>
 </section>
 
 <section id="skills" data-aos="fade-up">
-    <h2 class="section-title">Skills</h2>
-    <div class="text-center">
-      <span>Python</span>
-      <span>C++</span>
-      <span>Deep Learning</span>
-      <span>Computer Vision</span>
-      <span>LLMs</span>
-      <span>React</span>
-      <span>Node.js</span>
-      <span>SQL</span>
-      <span>Jetson Nano</span>
-      <span>Raspberry Pi</span>
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-grid">
+    <span>Python</span><span>C++</span><span>Deep Learning</span><span>Computer Vision</span>
+    <span>LLMs</span><span>React</span><span>Node.js</span><span>SQL</span><span>Jetson Nano</span><span>Raspberry Pi</span>
+  </div>
+</section>
+
+<section id="publications" data-aos="fade-up">
+  <h2 class="section-title">Publications</h2>
+  <div class="container">
+    <div class="timeline-entry">
+      <strong>2023 — "Design and Implementation of Autonomous Underwater Vehicles' Software Stack"</strong><br>
+      Published in IEEE Xplore — research on modular software architecture for AUV control systems.  
+      <a href="https://ieeexplore.ieee.org/abstract/document/1008580" target="_blank" class="text-white">View on IEEE Xplore</a>
     </div>
+  </div>
 </section>
 
 <section id="contact" data-aos="fade-up">
-    <h2 class="section-title">Contact</h2>
-    <div class="text-center">
-      <p>Email: <a href="mailto:kulsoommasood19@gmail.com" class="text-white">kulsoommasood19@gmail.com</a></p>
-      <p>Phone: <a href="tel:+919634802928" class="text-white">+91 96348 02928</a></p>
-      <a href="https://linkedin.com/in/kulsoommasood" target="_blank" class="btn btn-primary mt-2">LinkedIn</a>
-    </div>
+  <h2 class="section-title">Contact</h2>
+  <div class="text-center">
+    <p>Email: <a href="mailto:kulsoommasood19@gmail.com" class="text-white">kulsoommasood19@gmail.com</a></p>
+    <p>Phone: <a href="tel:+919634802928" class="text-white">+91 96348 02928</a></p>
+    <a href="https://linkedin.com/in/kulsoommasood" target="_blank" class="btn btn-primary mt-2">LinkedIn</a>
+  </div>
 </section>
 
-<footer>
-    <p>&copy; 2024 Kulsoom Masood</p>
-</footer>
+<footer><p>&copy; 2024 Kulsoom Masood</p></footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({once:true,duration:1000});</script>
+<script>AOS.init({ once:true, duration:1000 });</script>
 </body>
 </html>
