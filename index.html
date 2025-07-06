@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,15 +12,17 @@
             font-family: 'Poppins', sans-serif;
             background: #f7f9fc;
             color: #333;
+            scroll-behavior: smooth;
         }
         nav {
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .hero {
-            background: linear-gradient(135deg, #007bff, #00bcd4);
-            color: white;
-            padding: 120px 20px;
+            background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('hero-bg.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 140px 20px;
             text-align: center;
+            position: relative;
         }
         .hero img {
             width: 160px;
@@ -31,20 +32,34 @@
             margin-top: 25px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
-        .btn-primary {
-            border-radius: 50px;
-            padding: 10px 30px;
+        .btn-floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
         }
         .section-title {
             text-align: center;
             margin: 60px 0 30px;
             font-weight: 600;
+            position: relative;
+        }
+        .section-title::after {
+            content: "";
+            width: 60px;
+            height: 3px;
+            background: #007bff;
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 5px;
         }
         .project-card {
             transition: all 0.3s ease;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: #fff;
         }
         .project-card:hover {
             transform: translateY(-8px);
@@ -74,6 +89,18 @@
             padding: 8px 15px;
             border-radius: 25px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        #btn-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all .4s;
+        }
+        #btn-top.show {
+            opacity: 1;
+            transform: translateY(0);
         }
         footer {
             background: #fff;
@@ -109,12 +136,12 @@
         <p class="lead">AI Researcher & Software Engineer passionate about building intelligent systems with AI, Computer Vision, and modern software technologies.</p>
         <img src="mypic.jpeg" alt="Kulsoom Masood">
         <br>
-        <a href="Kulsoom Masood_2025 (1).pdf" class="btn btn-light mt-4" download>Download Resume</a>
+        <a href="Kulsoom Masood_2025 (1).pdf" class="btn btn-primary btn-floating mt-4" download>Download Resume</a>
     </div>
 </section>
 
 <section id="projects" class="container my-5">
-    <h2 class="section-title" data-aos="fade-up">Projects</h2>
+    <h2 class="section-title" data-aos="fade-up">🚀 Projects</h2>
     <div class="row g-4">
         <div class="col-md-4" data-aos="zoom-in">
             <div class="card project-card">
@@ -135,7 +162,7 @@
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="card project-card">
                 <div class="card-body">
-                    <h5 class="card-title">LLM-Powered Company Knowledge Chatbot</h5>
+                    <h5 class="card-title">LLM-Powered Company Chatbot</h5>
                     <p class="card-text">Generative AI chatbot using Retrieval-Augmented Generation (RAG) and LLMs to answer organization-specific queries from company documents.</p>
                 </div>
             </div>
@@ -144,12 +171,12 @@
 </section>
 
 <section id="journey" class="container my-5">
-    <h2 class="section-title" data-aos="fade-up">Professional Experience</h2>
+    <h2 class="section-title" data-aos="fade-up">📚 Experience</h2>
     <div class="timeline" data-aos="fade-left">
-        <div class="timeline-event" onclick="alert('IIIT Hyderabad | Research Intern: Developed AI models for traffic anomaly detection using LLMs like InternVL & InternLM-XComposer2. Enhanced autonomous driving perception in Indian traffic datasets.')">
+        <div class="timeline-event" onclick="alert('IIIT Hyderabad Research Intern: Developed AI models for traffic anomaly detection using LLMs like InternVL & InternLM-XComposer2.')">
             <strong>Summer 2024:</strong> IIIT Hyderabad | Research Intern
         </div>
-        <div class="timeline-event" onclick="alert('CMERI-CSIR | Research Intern: Designed underwater docking station detection system using color extraction and size estimation without reference. Applied novel computer vision methods for underwater environments.')">
+        <div class="timeline-event" onclick="alert('CMERI-CSIR Research Intern: Designed underwater docking station detection using advanced computer vision techniques.')">
             <strong>Summer 2023:</strong> CMERI-CSIR | Research Intern
         </div>
         <div class="timeline-event" onclick="alert('B.Tech Computer Engineering from AMU with academic distinction. Specialized in AI, Computer Vision, and Software Development.')">
@@ -159,13 +186,13 @@
 </section>
 
 <section id="skills" class="container my-5">
-    <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
+    <h2 class="section-title" data-aos="fade-up">🛠 Technical Skills</h2>
     <div class="skills" data-aos="fade-up">
         <span>Python</span>
         <span>C++</span>
         <span>Deep Learning</span>
         <span>Computer Vision</span>
-        <span>LLMs (InternVL, InternLM)</span>
+        <span>LLMs</span>
         <span>React</span>
         <span>Node.js</span>
         <span>SQL</span>
@@ -175,13 +202,15 @@
 </section>
 
 <section id="contact" class="container my-5">
-    <h2 class="section-title" data-aos="fade-up">Contact</h2>
+    <h2 class="section-title" data-aos="fade-up">✉️ Contact</h2>
     <div class="text-center" data-aos="fade-up">
         <p>Email: <a href="mailto:kulsoommasood19@gmail.com">kulsoommasood19@gmail.com</a></p>
         <p>Phone: <a href="tel:+919634802928">+91-963-4802-928</a></p>
         <a href="https://linkedin.com/in/kulsoommasood" target="_blank" class="btn btn-primary mt-2">LinkedIn</a>
     </div>
 </section>
+
+<button id="btn-top" class="btn btn-primary">↑ Top</button>
 
 <footer>
     <p>&copy; 2024 Kulsoom Masood. All rights reserved.</p>
@@ -190,10 +219,14 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({
-    once: true,
-    duration: 1000
-  });
+AOS.init({ once: true, duration: 1000 });
+const topBtn = document.getElementById('btn-top');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) topBtn.classList.add('show');
+    else topBtn.classList.remove('show');
+});
+topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 </script>
+
 </body>
 </html>
