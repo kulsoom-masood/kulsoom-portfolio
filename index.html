@@ -21,7 +21,10 @@ section { padding:80px 20px; }
 .section-title { text-align:center; margin-bottom:40px; font-size:1.8rem; font-weight:600; }
 .project-card { background:#1a1a1a; border-radius:12px; padding:20px; height:100%; transition:transform .3s ease, box-shadow .3s ease; }
 .project-card:hover { transform:translateY(-6px); box-shadow:0 0 15px rgba(0,123,255,0.3); }
-.timeline-entry { background:#1a1a1a; border-left:3px solid #007bff; padding:15px 20px; margin-bottom:25px; border-radius:6px; }
+.timeline-container { position:relative; margin-left:20px; }
+.timeline-container::before { content:""; position:absolute; left:10px; top:0; bottom:0; width:2px; background:#007bff; }
+.timeline-entry { position:relative; background:#1a1a1a; margin-left:25px; margin-bottom:30px; padding:15px 20px; border-radius:6px; }
+.timeline-entry::before { content:""; position:absolute; left:-17px; top:15px; width:12px; height:12px; background:#007bff; border-radius:50%; }
 .skills-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap:15px; max-width:700px; margin:0 auto; }
 .skills-grid strong { grid-column: 1/-1; margin-top:15px; text-align:left; font-size:1rem; color:#fff; }
 .skills-grid span { background:#222; display:block; text-align:center; padding:10px; border-radius:20px; }
@@ -40,7 +43,7 @@ footer { background:#000; color:#888; padding:15px 0; text-align:center; }
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
         <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -70,8 +73,8 @@ footer { background:#000; color:#888; padding:15px 0; text-align:center; }
       <div class="col-md-3">
         <div class="project-card h-100">
           <h5>Traffic-Tech Surveillance</h5>
-          <p>An intelligent traffic surveillance system using computer vision, machine learning, and deep learning on Jetson Nano. Empowered with vehicle detection, vehicle tracking, overspeed detection, and license plate recognition for challan issuance. It also provides real-time traffic flow analysis through a user-friendly web application for efficient traffic management. 
-          <a href="FinalProjectReport.pdf" target="_blank" class="text-white">View Report</a></p>
+          <p>An intelligent traffic surveillance system using computer vision, machine learning, and deep learning on Jetson Nano. Provides vehicle detection, tracking, overspeed detection, and license plate recognition for challan issuance, with real-time traffic flow analysis.</p>
+          <a href="FinalProjectReport.pdf" target="_blank" class="text-white">View Report</a>
         </div>
       </div>
       <div class="col-md-3">
@@ -90,69 +93,45 @@ footer { background:#000; color:#888; padding:15px 0; text-align:center; }
   </div>
 </section>
 
-<section id="experience" data-aos="fade-up">
-  <h2 class="section-title">Experience</h2>
-  <div class="container">
+<section id="journey" data-aos="fade-up">
+  <h2 class="section-title">Journey</h2>
+  <div class="container timeline-container">
+
     <div class="timeline-entry">
       <strong>2024 — Research Intern, IIIT Hyderabad</strong>
-      <p>Worked on Large Language Model (LLM) pipelines to detect and describe anomalous objects and events in Indian traffic scenes. Utilized InternVL and InternLM-XComposer2 models to caption traffic anomalies for improved autonomous vehicle perception. Evaluated model performance on datasets (METEOR, IDD) through Python-based analysis and manual verification. Operated on GPU servers in High-Performance Computing environments.  
+      <p>Worked on Large Language Model (LLM) pipelines to detect and describe anomalous objects and events in Indian traffic scenes. Utilized InternVL and InternLM-XComposer2 models to caption traffic anomalies for improved autonomous vehicle perception. Evaluated model performance on datasets (METEOR, IDD) using Python-based analysis.  
       <a href="final report.pdf" target="_blank" class="text-white">Read Final Report</a></p>
     </div>
 
     <div class="timeline-entry">
       <strong>2023 — Research Intern, CMERI-CSIR (Indian Academy of Sciences)</strong>
-      <p>Developed computer vision system for underwater docking detection using color extraction and image-based size estimation. Designed a novel size estimation method without reference objects, applied to AUV docking tasks. Implemented image processing solutions using Python and OpenCV to address underwater visibility challenges.  
+      <p>Developed computer vision system for underwater docking detection using color extraction and image-based size estimation. Designed a novel size estimation method without reference objects, applied to AUV docking tasks.  
       <a href="ENGS1891_Kulsoom Final SRFP Report (Sent by Post) 04-08-2023.pdf" target="_blank" class="text-white">Read Final Report</a></p>
     </div>
 
     <div class="timeline-entry">
       <strong>2021 – 2025 — B.Tech Computer Engineering, Aligarh Muslim University</strong>
-      <p>Final-year student with <strong>8.538 CGPA (Honours)</strong>. <strong>Batch Topper (1st Rank)</strong> in First Semester. Completed academic and research projects in AI, Computer Vision, and Software Development. Represented technical projects at national competitions including <strong>IIT Bombay Techfest</strong> and <strong>MTS NANDA Innovation Awards</strong>.</p>
+      <p>Graduated with <strong>8.538 CGPA (Honours)</strong>. <strong>Batch Topper</strong> in First Semester with a <strong>9.7 SPI</strong>. Led academic and research projects in AI, Computer Vision, and Software Development. Represented technical innovations at national competitions including <strong>IIT Bombay Techfest</strong> and <strong>MTS NANDA Innovation Awards</strong>.</p>
     </div>
+
   </div>
 </section>
 
 <section id="skills" data-aos="fade-up">
   <h2 class="section-title">Skills</h2>
   <div class="skills-grid">
-
     <strong>Programming Languages</strong>
-    <span>Python</span>
-    <span>C++</span>
-    <span>C</span>
-
+    <span>Python</span><span>C++</span><span>C</span>
     <strong>AI / Machine Learning</strong>
-    <span>Deep Learning</span>
-    <span>Computer Vision</span>
-    <span>LLMs (Large Language Models)</span>
-
+    <span>Deep Learning</span><span>Computer Vision</span><span>LLMs</span>
     <strong>Web Development</strong>
-    <span>React</span>
-    <span>Node.js</span>
-    <span>SQL</span>
-    <span>HTML</span>
-    <span>CSS</span>
-
+    <span>React</span><span>Node.js</span><span>SQL</span><span>HTML</span><span>CSS</span>
     <strong>Tools & Technologies</strong>
-    <span>Jetson Nano</span>
-    <span>Raspberry Pi</span>
-    <span>Arduino</span>
-    <span>Git</span>
-    <span>OpenCV</span>
-    <span>LaTeX</span>
-
+    <span>Jetson Nano</span><span>Raspberry Pi</span><span>Arduino</span><span>Git</span><span>OpenCV</span><span>LaTeX</span>
     <strong>CS Fundamentals</strong>
-    <span>Data Structures & Algorithms (DSA)</span>
-    <span>Object-Oriented Programming (OOPs)</span>
-    <span>Operating Systems (OS)</span>
-    <span>Computer Networks (CN)</span>
-    <span>Database Management Systems (DBMS)</span>
-    <span>Software Engineering</span>
-
+    <span>Data Structures & Algorithms (DSA)</span><span>Object-Oriented Programming (OOPs)</span><span>Operating Systems (OS)</span><span>Computer Networks (CN)</span><span>Database Management Systems (DBMS)</span><span>Software Engineering</span>
     <strong>Platforms</strong>
-    <span>Linux</span>
-    <span>Windows</span>
-
+    <span>Linux</span><span>Windows</span>
   </div>
 </section>
 
@@ -162,7 +141,7 @@ footer { background:#000; color:#888; padding:15px 0; text-align:center; }
     <div class="timeline-entry">
       <strong>2023 — "Design and Implementation of Autonomous Underwater Vehicles' Software Stack"</strong><br>
       Published in IEEE Xplore — research on modular software architecture for AUV control systems.  
-      <a href="https://ieeexplore.ieee.org/abstract/document/1008580" target="_blank" class="text-white">View on IEEE Xplore</a>
+      <a href="https://ieeexplore.ieee.org/abstract/document/10085802" target="_blank" class="text-white">View on IEEE Xplore</a>
     </div>
   </div>
 </section>
